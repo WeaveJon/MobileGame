@@ -1,30 +1,27 @@
 using UnityEngine;
 using System.Collections;
 
-public class datafileMoveRight : MonoBehaviour {
-
+public class datafileMoveRight : MonoBehaviour
+{
     public GameObject datafileParent;
     public float force = 100.0f;
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     private void OnMouseDown()
     {
-        if (datafileParent.GetComponent<datafileObject>().canMoveAgain == true)
+        if (datafileParent != null)
         {
-            Debug.Log("hit :" + this.name);
-            datafileParent.rigidbody.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
-            datafileParent.rigidbody.AddForce(Vector3.right * force);
-            datafileParent.GetComponent<datafileObject>().canMoveAgain = false;
+            if (datafileParent.GetComponent<datafileObject>().canMoveAgain == true)
+            {
+                Debug.Log("hit :" + this.name);
+                datafileParent.rigidbody.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
+                datafileParent.rigidbody.AddForce(Vector3.right * force);
+                datafileParent.GetComponent<datafileObject>().canMoveAgain = false;
+            }
         }
+        else
+        {
+            Debug.Log("Please select a data file");
+        }
+
     }
 }

@@ -44,6 +44,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\GUI\MainMenuGUI.cs" />
+     <Compile Include="Assets\Scripts\Objects\EndSquare.cs" />
      <Compile Include="Assets\Scripts\Objects\datafile\datafileCenter.cs" />
      <Compile Include="Assets\Scripts\Objects\datafile\datafileMoveDown.cs" />
      <Compile Include="Assets\Scripts\Objects\datafile\datafileMoveLeft.cs" />
