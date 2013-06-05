@@ -33,5 +33,6 @@ public class EndSquare : MonoBehaviour
     void EndLevel()
     {
         Debug.Log("Level Complete");
+        Application.LoadLevel(0);
     }
 }

@@ -7,6 +7,7 @@ public class MainMenuGUI : MonoBehaviour
     float screenWidth;
     float screenHeight;
     byte buttonWidth = 100;
+    byte height = 40;
     string menuState = "Default";
 
     void Start()
@@ -21,30 +22,30 @@ public class MainMenuGUI : MonoBehaviour
         switch (menuState)
         {
             case "Default":
-                if (GUI.Button(new Rect((screenWidth * .45f), (screenHeight * .35f), buttonWidth, 20), "Play"))
+                if (GUI.Button(new Rect((screenWidth * .45f), (screenHeight * .35f), buttonWidth, height), "Play"))
                 {
                     menuState = "Play";
                 }
-                if (GUI.Button(new Rect((screenWidth * .45f), (screenHeight * .40f), buttonWidth, 20), "Options"))
+                if (GUI.Button(new Rect((screenWidth * .45f), (screenHeight * .45f), buttonWidth, height), "Options"))
                 {
 
                 }
-                if (GUI.Button(new Rect((screenWidth * .45f), (screenHeight * .45f), buttonWidth, 20), "Credits"))
+                if (GUI.Button(new Rect((screenWidth * .45f), (screenHeight * .55f), buttonWidth, height), "Credits"))
                 {
 
                 }
                 break;
 
             case "Play":
-                if (GUI.Button(new Rect((screenWidth * .45f), (screenHeight * .35f), buttonWidth, 20), "New Game"))
+                if (GUI.Button(new Rect((screenWidth * .45f), (screenHeight * .35f), buttonWidth, height), "New Game"))
+                {
+                    Application.LoadLevel(1);
+                }
+                if (GUI.Button(new Rect((screenWidth * .45f), (screenHeight * .45f), buttonWidth, height), "Select Level"))
                 {
 
                 }
-                if (GUI.Button(new Rect((screenWidth * .45f), (screenHeight * .40f), buttonWidth, 20), "Select Level"))
-                {
-
-                }
-                if (GUI.Button(new Rect((screenWidth * .45f), (screenHeight * .45f), buttonWidth, 20), "Back"))
+                if (GUI.Button(new Rect((screenWidth * .45f), (screenHeight * .55f), buttonWidth, height), "Back"))
                 {
                     menuState = "Default";
                 }
@@ -55,6 +56,11 @@ public class MainMenuGUI : MonoBehaviour
 
             case "Credits":
                 break;
+        }
+
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
         }
     }
 }

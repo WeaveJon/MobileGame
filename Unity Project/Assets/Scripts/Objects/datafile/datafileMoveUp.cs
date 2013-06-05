@@ -14,6 +14,7 @@ public class datafileMoveUp : MonoBehaviour
             if (datafileParent.GetComponent<datafileObject>().canMoveAgain == true)
             {
                 Debug.Log("hit :" + this.name);
+                datafileParent.GetComponent<datafileObject>().PreviousPosition();
                 datafileParent.rigidbody.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
                 datafileParent.rigidbody.AddForce(Vector3.up * force);
                 datafileParent.GetComponent<datafileObject>().canMoveAgain = false;
@@ -22,6 +23,8 @@ public class datafileMoveUp : MonoBehaviour
         else
         {
             Debug.Log("Please select a data file");
+            GameObject mainCamera = GameObject.Find("Main Camera");
+            mainCamera.GetComponent<InGameMenu>().SelectAPiece();
         }
     }
 }
