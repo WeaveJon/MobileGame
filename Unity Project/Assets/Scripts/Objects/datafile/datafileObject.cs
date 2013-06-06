@@ -22,6 +22,7 @@ public class datafileObject : MonoBehaviour
     {
         controlCenter.GetComponent<MeshRenderer>().material = objectMaterial;
         controlCenter.GetComponent<datafileCenter>().setObject(this.gameObject);
+        this.GetComponent<MeshRenderer>().material.color = Color.yellow;
     }
 
     void OpeningPostion()
