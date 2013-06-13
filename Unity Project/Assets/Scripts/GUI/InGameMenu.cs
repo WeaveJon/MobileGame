@@ -35,7 +35,7 @@ public class InGameMenu : MonoBehaviour
             datafile.GetComponent<datafileObject>().ResetToOpeningPosition();
         }
 
-        if (GUI.Button(new Rect(Screen.width - 375, Screen.height - 100, 100, 100), stepBackButton))
+        if (GUI.Button(new Rect(480, Screen.height - 100, 100, 100), stepBackButton))
         {
             datafile.GetComponent<datafileObject>().ResetToPreviousPostion();
         }

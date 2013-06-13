@@ -10,7 +10,7 @@ public class datafileObject : MonoBehaviour
     float orgPosY;
     float pastPosx;
     float pastPosy;
-
+    private string movementAxis;
 	// Use this for initialization
 	void Start () 
     {
@@ -45,5 +45,15 @@ public class datafileObject : MonoBehaviour
     {
         pastPosx = this.transform.position.x;
         pastPosy = this.transform.position.y;
+    }
+
+    public void SetMovementAxis(string axis)
+    {
+        movementAxis = axis;
+    }
+
+    public string GetMovementAxis()
+    {
+        return movementAxis;
     }
 }

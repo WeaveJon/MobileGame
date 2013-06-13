@@ -3,6 +3,7 @@ using System.Collections;
 
 public class EndSquare : MonoBehaviour 
 {
+   public bool isDemo = false;
     bool isInTrigger = false;
     float timer = .5f;
 	
@@ -14,7 +15,13 @@ public class EndSquare : MonoBehaviour
             timer -= Time.deltaTime;
             if (timer <= 0.0f)
             {
-                EndLevel();
+                if (isDemo == true)
+                {
+                }
+                else if (isDemo == false)
+                {
+                    EndLevel();
+                }
             }
         }
 	}
@@ -33,6 +40,7 @@ public class EndSquare : MonoBehaviour
     void EndLevel()
     {
         Debug.Log("Level Complete");
-        Application.LoadLevel(0);
+        GameObject cam = GameObject.Find("Main Camera");
+        cam.GetComponent<EndStageGUI>().Activate();
     }
 }

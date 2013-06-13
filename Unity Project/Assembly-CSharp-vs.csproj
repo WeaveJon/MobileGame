@@ -44,14 +44,14 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Automated Sequences\TutorialLvl0.cs" />
+     <Compile Include="Assets\Scripts\GUI\EndStageGUI.cs" />
      <Compile Include="Assets\Scripts\GUI\InGameMenu.cs" />
      <Compile Include="Assets\Scripts\GUI\MainMenuGUI.cs" />
      <Compile Include="Assets\Scripts\Objects\EndSquare.cs" />
      <Compile Include="Assets\Scripts\Objects\datafile\datafileCenter.cs" />
-     <Compile Include="Assets\Scripts\Objects\datafile\datafileMoveDown.cs" />
-     <Compile Include="Assets\Scripts\Objects\datafile\datafileMoveLeft.cs" />
-     <Compile Include="Assets\Scripts\Objects\datafile\datafileMoveRight.cs" />
-     <Compile Include="Assets\Scripts\Objects\datafile\datafileMoveUp.cs" />
+     <Compile Include="Assets\Scripts\Objects\datafile\datafileMovementButton.cs" />
+     <Compile Include="Assets\Scripts\Objects\datafile\datafileMovementController.cs" />
      <Compile Include="Assets\Scripts\Objects\datafile\datafileObject.cs" />
      <Compile Include="Assets\Scripts\Objects\wallStop.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
