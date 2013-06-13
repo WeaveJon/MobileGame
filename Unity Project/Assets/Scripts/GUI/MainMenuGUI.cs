@@ -9,7 +9,7 @@ public class MainMenuGUI : MonoBehaviour
     byte buttonWidth = 200;
     byte height = 40;
     string menuState = "Default";
-    private int selectionGridInt = 0;
+    private int selectionGridInt = -1;
     private string[] selectionStrings = { "Level 1", "Level 2", "Level 3", "Level 4" };
 
     void Start()
@@ -20,9 +20,9 @@ public class MainMenuGUI : MonoBehaviour
 
     void Update()
     {
-        if (selectionGridInt != 0)
+        if (selectionGridInt != -1)
         {
-           int level = selectionGridInt + 1;
+           int level = selectionGridInt + 2;
            Application.LoadLevel(level);
         }
     }

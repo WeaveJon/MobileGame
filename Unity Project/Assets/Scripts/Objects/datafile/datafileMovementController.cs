@@ -18,7 +18,7 @@ public class datafileMovementController : MonoBehaviour
         {
             
             collision.gameObject.rigidbody.velocity = new Vector3(0, 0, 0) * 0;
-            LeanTween.moveLocal(collision.gameObject, position, .5f);
+            LeanTween.moveLocal(collision.gameObject, position, .25f);
             collision.gameObject.rigidbody.constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
             collision.gameObject.GetComponent<datafileObject>().canMoveAgain = true;
         }
