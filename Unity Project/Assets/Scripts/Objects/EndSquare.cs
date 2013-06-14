@@ -1,14 +1,17 @@
 using UnityEngine;
 using System.Collections;
 
-public class EndSquare : MonoBehaviour 
+public class EndSquare : MonoBehaviour
 {
-   public bool isDemo = false;
+    public GameObject audioSFXController;
+    public bool isDemo = false;
     bool isInTrigger = false;
     float timer = .5f;
-	
-	// Update is called once per frame
-	void Update () 
+    bool playOnce = true;
+
+
+    // Update is called once per frame
+    void Update()
     {
         if (isInTrigger == true)
         {
@@ -20,11 +23,14 @@ public class EndSquare : MonoBehaviour
                 }
                 else if (isDemo == false)
                 {
-                    EndLevel();
+                    if (playOnce == true)
+                    {
+                        EndLevel();
+                    }
                 }
             }
         }
-	}
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -42,5 +48,7 @@ public class EndSquare : MonoBehaviour
         Debug.Log("Level Complete");
         GameObject cam = GameObject.Find("Main Camera");
         cam.GetComponent<EndStageGUI>().Activate();
+        audioSFXController.GetComponent<AudioController>().EndLevelSFX();
+        playOnce = false;
     }
 }

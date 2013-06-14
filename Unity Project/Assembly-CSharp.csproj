@@ -37,23 +37,26 @@
     <Reference Include="System.XML" />
 	<Reference Include="System.Core" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>E:/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>E:/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Automated Sequences\TutorialLvl0.cs" />
+     <Compile Include="Assets\Scripts\Controllers\AudioController.cs" />
      <Compile Include="Assets\Scripts\GUI\EndStageGUI.cs" />
      <Compile Include="Assets\Scripts\GUI\InGameMenu.cs" />
      <Compile Include="Assets\Scripts\GUI\MainMenuGUI.cs" />
      <Compile Include="Assets\Scripts\Objects\EndSquare.cs" />
+     <Compile Include="Assets\Scripts\Objects\Lazer.cs" />
      <Compile Include="Assets\Scripts\Objects\datafile\datafileCenter.cs" />
      <Compile Include="Assets\Scripts\Objects\datafile\datafileMovementButton.cs" />
      <Compile Include="Assets\Scripts\Objects\datafile\datafileMovementController.cs" />
      <Compile Include="Assets\Scripts\Objects\datafile\datafileObject.cs" />
      <Compile Include="Assets\Scripts\Objects\wallStop.cs" />
+     <Compile Include="Assets\SimpleParticlePack\Scripts\ParticleTester.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Multiply Culled.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />

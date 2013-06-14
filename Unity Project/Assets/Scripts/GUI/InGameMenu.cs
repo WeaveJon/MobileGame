@@ -6,6 +6,7 @@ public class InGameMenu : MonoBehaviour
     public Texture stepBackButton;
     public Texture resetButton;
     public GameObject datafile;
+    public GameObject audioObject;
     bool selectPiece = false;
     float timer = 3f;
 
