@@ -8,6 +8,7 @@ public class InGameMenu : MonoBehaviour
     public GameObject datafile;
     public GameObject audioObject;
     bool selectPiece = false;
+    bool pauseMenu = false;
     float timer = 3f;
 
     void Update()
@@ -25,6 +26,7 @@ public class InGameMenu : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Escape))
         {
+            pauseMenu = true;
             Application.Quit();
         }
     }
@@ -44,6 +46,21 @@ public class InGameMenu : MonoBehaviour
         if (selectPiece == true)
         {
             GUI.Box(new Rect(Screen.width - 250, Screen.height - 260, 200, 40), "Please Select a Datafile...");
+        }
+
+        if (pauseMenu == true)
+        {
+            Time.timeScale = 0;
+            GUI.Box(new Rect(0, 0, Screen.width, Screen.height), "");
+            if (GUI.Button(new Rect((Screen.width / 4) - 100, (Screen.height * .45f), 200, 40), "Unpause"))
+            {
+                pauseMenu = false;
+                Time.timeScale = 1.0f;
+            }
+            if (GUI.Button(new Rect(((Screen.width / 4) * 3) - 100, (Screen.height * .45f), 200, 40), "Main Menu"))
+            {
+                Application.LoadLevel(0);
+            }
         }
 
     }

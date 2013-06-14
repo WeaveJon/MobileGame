@@ -73,7 +73,7 @@ public class MainMenuGUI : MonoBehaviour
 
                  if (GUI.Button(new Rect((screenWidth), (screenHeight * .55f), buttonWidth, height), "Back"))
                  {
-                     AudioObject.audio.Play();
+                    AudioObject.audio.Play();
                     menuState = "Default";
                 }
                 break;
