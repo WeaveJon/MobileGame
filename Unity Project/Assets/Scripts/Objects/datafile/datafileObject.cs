@@ -5,7 +5,7 @@ public class datafileObject : MonoBehaviour
 {
     public bool canMoveAgain = true;
     public GameObject controlCenter;
-    private Material objectMaterial;
+    public Material objectMaterial;
     float orgPosX;
     float orgPosY;
     float pastPosx;
@@ -14,15 +14,12 @@ public class datafileObject : MonoBehaviour
 	// Use this for initialization
 	void Start () 
     {
-        objectMaterial = this.GetComponent<MeshRenderer>().material;
         OpeningPostion();
 	}
 	
     private void OnMouseDown()
     {
-        controlCenter.GetComponent<MeshRenderer>().material = objectMaterial;
         controlCenter.GetComponent<datafileCenter>().setObject(this.gameObject);
-        this.GetComponent<MeshRenderer>().material.color = Color.yellow;
     }
 
     void OpeningPostion()
@@ -55,5 +52,11 @@ public class datafileObject : MonoBehaviour
     public string GetMovementAxis()
     {
         return movementAxis;
+    }
+
+    public void Selected()
+    {
+        controlCenter.GetComponent<MeshRenderer>().material = objectMaterial;
+        this.GetComponent<MeshRenderer>().material.color = Color.yellow;
     }
 }

@@ -18,6 +18,9 @@ public class datafileCenter : MonoBehaviour
         downButton = GameObject.Find("Down");
         leftButton = GameObject.Find("Left");
         rightButton = GameObject.Find("Right");
+        GameObject temp = GameObject.FindGameObjectWithTag("Datafile");
+        setObject(temp);
+        temp.GetComponent<datafileObject>().Selected();
     }
 
     // Update is called once per frame
@@ -96,4 +99,5 @@ public class datafileCenter : MonoBehaviour
         }
     }
 
+    
 }

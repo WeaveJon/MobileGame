@@ -8,12 +8,17 @@ public class Lazer : MonoBehaviour
     public float endY;
     private float startX;
     private float startY;
+
 	void Start () 
     {
-        StartCoroutine("ShootLeft");
+        Time.timeScale = 1.0f;
+
+        Debug.Log(this.name + "Fired");
+        
         startX = this.transform.position.x;
         startY = this.transform.position.y;
 
+        StartCoroutine("ShootLeft");
 	}
 
     IEnumerator ShootLeft()

@@ -27,7 +27,6 @@ public class InGameMenu : MonoBehaviour
         if (Input.GetKey(KeyCode.Escape))
         {
             pauseMenu = true;
-            Application.Quit();
         }
     }
 
