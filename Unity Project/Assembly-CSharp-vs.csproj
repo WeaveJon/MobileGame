@@ -46,6 +46,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Automated Sequences\TutorialLvl0.cs" />
      <Compile Include="Assets\Scripts\Controllers\AudioController.cs" />
+     <Compile Include="Assets\Scripts\Controllers\AudioSongController.cs" />
      <Compile Include="Assets\Scripts\GUI\EndStageGUI.cs" />
      <Compile Include="Assets\Scripts\GUI\InGameMenu.cs" />
      <Compile Include="Assets\Scripts\GUI\MainMenuGUI.cs" />

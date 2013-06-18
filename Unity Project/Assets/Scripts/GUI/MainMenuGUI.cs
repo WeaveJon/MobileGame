@@ -24,6 +24,8 @@ public class MainMenuGUI : MonoBehaviour
         if (selectionGridInt != -1)
         {
            int level = selectionGridInt + 2;
+           GameObject MusicBox = GameObject.Find("ThemeSongDevice");
+           MusicBox.GetComponent<AudioSongController>().PlayInGameMusic();
            Application.LoadLevel(level);
         }
     }
@@ -53,6 +55,8 @@ public class MainMenuGUI : MonoBehaviour
                 if (GUI.Button(new Rect((screenWidth), (screenHeight * .25f), buttonWidth, height), "Tutorial"))
                 {
                     AudioObject.audio.Play();
+                    GameObject MusicBox = GameObject.Find("ThemeSongDevice");
+                    MusicBox.GetComponent<AudioSongController>().PlayInGameMusic();
                     Application.LoadLevel(1);
                 }
                 if (GUI.Button(new Rect((screenWidth), (screenHeight * .45f), buttonWidth, height), "Select Level"))
