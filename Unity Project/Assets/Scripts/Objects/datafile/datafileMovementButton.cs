@@ -9,6 +9,11 @@ public class datafileMovementButton : MonoBehaviour
 
     private void OnMouseDown()
     {
+        MovePiece();
+    }
+
+    public void MovePiece()
+    {
         datafileCenterControl.GetComponent<datafileCenter>().MoveDataFile(direction);
         audioSFXController.GetComponent<AudioController>().MovementSFX();
     }

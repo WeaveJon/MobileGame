@@ -1,0 +1,44 @@
+-debug
+-target:library
+-nowarn:0169
+-out:Temp/Assembly-CSharp.dll
+-r:"C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll"
+-r:Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll
+-r:Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll
+-r:"C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll"
+-define:UNITY_ANDROID
+-define:ENABLE_MICROPHONE
+-define:ENABLE_IMAGEEFFECTS
+-define:ENABLE_WEBCAM
+-define:ENABLE_AUDIO_FMOD
+-define:ENABLE_NETWORK
+-define:ENABLE_MONO
+-define:ENABLE_PHYSICS
+-define:ENABLE_TERRAIN
+-define:ENABLE_CACHING
+-define:ENABLE_SUBSTANCE
+-define:ENABLE_GENERICS
+-define:UNITY_ANDROID_API
+-define:ENABLE_CLOTH
+-define:ENABLE_AUDIO
+-define:ENABLE_WWW
+-define:ENABLE_SHADOWS
+-define:UNITY_4_1_5
+-define:UNITY_4_1
+-define:ENABLE_PROFILER
+-define:UNITY_EDITOR
+"Assets/Scripts/Automated Sequences/TutorialLvl0.cs"
+Assets/Scripts/Controllers/AudioController.cs
+Assets/Scripts/Controllers/AudioSongController.cs
+Assets/Scripts/Controllers/TouchControls.cs
+Assets/Scripts/GUI/EndStageGUI.cs
+Assets/Scripts/GUI/InGameMenu.cs
+Assets/Scripts/GUI/MainMenuGUI.cs
+Assets/Scripts/Objects/EndSquare.cs
+Assets/Scripts/Objects/Lazer.cs
+Assets/Scripts/Objects/datafile/datafileCenter.cs
+Assets/Scripts/Objects/datafile/datafileMovementButton.cs
+Assets/Scripts/Objects/datafile/datafileMovementController.cs
+Assets/Scripts/Objects/datafile/datafileObject.cs
+Assets/Scripts/Objects/wallStop.cs
+Assets/SimpleParticlePack/Scripts/ParticleTester.cs
