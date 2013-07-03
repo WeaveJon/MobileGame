@@ -33,19 +33,22 @@ public class MainMenuGUI : MonoBehaviour
     void OnGUI()
     {
         GUI.skin = MenuSkin;
+        GUIStyle Play = MenuSkin.customStyles[0];
+        GUIStyle Options = MenuSkin.customStyles[1];
+        GUIStyle Credits = MenuSkin.customStyles[2];
         switch (menuState)
         {
             case "Default":
-                if (GUI.Button(new Rect((screenWidth), (screenHeight * .25f), buttonWidth, height), "Play"))
+                if (GUI.Button(new Rect((screenWidth), (screenHeight * .25f), buttonWidth, height), "", Play))
                 {
                     AudioObject.audio.Play();
                     menuState = "Play";
                 }
-                if (GUI.Button(new Rect((screenWidth), (screenHeight * .45f), buttonWidth, height), "Options"))
+                if (GUI.Button(new Rect((screenWidth), (screenHeight * .45f), buttonWidth, height), "", Options))
                 {
                     AudioObject.audio.Play();
                 }
-                if (GUI.Button(new Rect((screenWidth), (screenHeight * .65f), buttonWidth, height), "Credits"))
+                if (GUI.Button(new Rect((screenWidth), (screenHeight * .65f), buttonWidth, height), "", Credits))
                 {
                     AudioObject.audio.Play();
                 }
